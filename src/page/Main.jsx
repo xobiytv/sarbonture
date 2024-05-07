@@ -15,7 +15,7 @@ import Highlights from '../components/Highlights';
 import Pricing from '../components/Pricing';
 import Features from '../components/Features';
 import Testimonials from '../components/Testimonials';
-import FAQ from '../components/FAQ';
+import TopNav from '../components/TopNav';
 import Footer from '../components/Footer';
 import getLPTheme from './getLPTheme';
 import Ture from '../components/Ture';
@@ -36,6 +36,7 @@ export default function LandingPage() {
   return (
     <ThemeProvider theme={showCustomTheme ? LPtheme : defaultTheme}>
       <div className='bg-white'>
+        <TopNav />
         <AppAppBar mode={mode} />
         {/* <Hero /> */}
         <Header />

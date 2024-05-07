@@ -117,6 +117,7 @@ export default function Highlights() {
                 spacing={1}
                 useFlexGap
                 sx={{
+                  width: '100%',
                   p: 3,
                   height: '100%',
                   borderRadius: '0px',
