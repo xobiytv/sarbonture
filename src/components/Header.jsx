@@ -23,7 +23,7 @@ export default function App() {
                                 <p className='text-[23px] font-light'>{item.name} </p>
                                 <b className='text-[63px]'>{item.destriction} </b>
                                 <div className='flex items-center'>
-                                    <button className='rounded bg-cyan-600 px-6 py-2 mt-12 active:bg-cyan-500 active:px-5 active:py-1 active:mt-14'>КОНТАКТЫ С НАМИ</button>
+                                    <button className='rounded bg-[#0E1A70] px-6 py-2 mt-12 active:bg-[#0E1A70] active:px-5 active:py-1 active:mt-14'>КОНТАКТЫ С НАМИ</button>
 
                                 </div>
                             </div>

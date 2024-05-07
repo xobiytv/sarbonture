@@ -31,37 +31,37 @@ export const ture =[
         id: 1,
         image: 'https://triptour.uz/wp-content/uploads/2023/11/2-1024x1024.png',
         name: 'Maldiv',
-        discration: 'Yaxshi joy Maldiv',
+        discration: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab assumenda temporibus laudantium asperiores dolorum aut optio quaerat pariatur inventore laborum debitis voluptatum porro delectus necessitatibus,',
     },
     {
         id: 2,
         image: 'https://triptour.uz/wp-content/uploads/2023/11/3-1024x1024.png',
         name: 'Dubay',
-        discration: 'Yaxshi joy Dubay',
+        discration: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab assumenda temporibus laudantium asperiores dolorum aut optio quaerat pariatur ',
     },
     {
         id: 3,
         image: 'https://triptour.uz/wp-content/uploads/2023/11/4-1024x1024.png',
         name: 'Tayland',
-        discration: 'Yaxshi joy Tayland',
+        discration: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab assumenda temporibus laudantium asperiores dolorum aut optio quaerat pariatur inventore laborum debitis voluptatum porro delectus necessitatibus, amet ad. Ea, magnam tenetur?',
     },
     {
         id: 4,
         image: 'https://triptour.uz/wp-content/uploads/2023/11/5-1024x1024.png',
         name: 'Turkiya',
-        discration: 'Yaxshi joy Turkiya',
+        discration: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab assumenda temporibus laudantium asperiores ',
     },
     {
         id: 5,
         image: 'https://triptour.uz/wp-content/uploads/2023/11/6-1024x1024.png',
         name: 'Xitoy',
-        discration: 'Yaxshi joy Xitoy',
+        discration: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab assumenda temporibus laudantium asperiores dolorum aut optio quaerat pariatur inventore laborum debitis voluptatum porro delectus necessitatibus, amet ad. Ea, magnam tenetur? Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab assumenda temporibus laudantium asperiores ',
     },
     {
         id: 6,
         image: 'https://triptour.uz/wp-content/uploads/2023/11/7-1024x1024.png',
         name: 'Malayziya',
-        discration: 'Yaxshi joy Malayziya',
+        discration: ' Ab assumenda temporibus laudantium asperiores dolorum aut optio quaerat pariatur inventore laborum debitis voluptatum porro delectus necessitatibus, amet ad. Ea, magnam tenetur?',
     },
 ]
 

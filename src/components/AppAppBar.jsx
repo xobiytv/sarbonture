@@ -1,18 +1,21 @@
 import * as React from 'react';
 import PropTypes from 'prop-types';
-
+import logo from '../assisent/logoWhite.png';
 import Box from '@mui/material/Box';
 import AppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
 import Button from '@mui/material/Button';
 import Container from '@mui/material/Container';
 import LocalPhoneIcon from '@mui/icons-material/LocalPhone';
-
+import TelegramIcon from '@mui/icons-material/Telegram';
+import InstagramIcon from '@mui/icons-material/Instagram';
+import YouTubeIcon from '@mui/icons-material/YouTube';
 import Typography from '@mui/material/Typography';
 import MenuItem from '@mui/material/MenuItem';
 import Drawer from '@mui/material/Drawer';
 import MenuIcon from '@mui/icons-material/Menu';
 import ToggleColorMode from './ToggleColorMode';
+import { Link } from 'react-router-dom';
 
 const logoStyle = {
   width: '140px',
@@ -49,7 +52,7 @@ function AppAppBar({ mode, toggleColorMode }) {
           boxShadow: 0,
           bgcolor: 'transparent',
           backgroundImage: 'none',
-          mt: 12  ,
+          mt: { xs: '0', md: '95px ', lg: '95px ' },
         }}
       >
         <div className='flex justify-center '>
@@ -62,9 +65,9 @@ function AppAppBar({ mode, toggleColorMode }) {
               justifyContent: 'space-between',
               flexShrink: 0,
               borderRadius: '999px',
-              bgcolor: '#fff',
+              bgcolor: '#0E1A70',
               // backdropFilter: 'blur(24px)',
-              maxHeight: 40,
+              height: '70px',
               border: '1px solid',
               borderColor: 'divider',
               boxShadow:
@@ -79,16 +82,20 @@ function AppAppBar({ mode, toggleColorMode }) {
                 display: 'flex',
                 alignItems: 'center',
                 ml: '-18px',
-                px: 0,
+                p: 2,
+                paddingTop: '3px',
+                paddingBottom: '3px',
               }}
             >
-              <img
-                src={
-                  'https://assets-global.website-files.com/61ed56ae9da9fd7e0ef0a967/61f12e6faf73568658154dae_SitemarkDefault.svg'
-                }
-                style={logoStyle}
-                alt="logo of sitemark"
-              />
+              <Link to={'/'}>
+                <img
+                  className='w-[70%] '
+                  src={logo}
+                  style={logoStyle}
+                  alt="logo of sitemark"
+                />
+              </Link>
+
               {/* <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
                 
               
@@ -105,34 +112,37 @@ function AppAppBar({ mode, toggleColorMode }) {
                 onClick={() => scrollToSection('features')}
                 sx={{ py: '6px', px: '12px' }}
               >
-                <Typography sx={{ fontSize: '17px', color: 'black', }} variant="body2" color="text.primary">
-                  ГЛАВНАЯ
-                </Typography>
+                <Link to={'/'} >
+                  <Typography sx={{ fontSize: '17px', color: 'white', }} variant="body2" color="text.primary">
+                    ГЛАВНАЯ
+                  </Typography>
+                </Link>
+
               </MenuItem>
               <MenuItem
                 onClick={() => scrollToSection('testimonials')}
                 sx={{ py: '6px', px: '12px' }}
               >
-                <Typography sx={{ fontSize: '17px', color: 'black', }} variant="body2" color="text.primary">
-                  О КОМПАНИИ
-                </Typography>
+
+                <Link to={'/about'} >
+                  <Typography sx={{ fontSize: '17px', color: 'white', }} variant="body2" color="text.primary">
+                    О КОМПАНИИ
+                  </Typography>
+                </Link>
+
               </MenuItem>
               <MenuItem
                 onClick={() => scrollToSection('highlights')}
                 sx={{ py: '6px', px: '12px' }}
               >
-                <Typography sx={{ fontSize: '17px', color: 'black', }} variant="body2" color="text.primary">
-                  ЗАРУБЕЖНЫЕ ТУРЫ
-                </Typography>
+                <Link to={'/tour'} >
+                  <Typography sx={{ fontSize: '17px', color: 'white', }} variant="body2" color="text.primary">
+                    ЗАРУБЕЖНЫЕ ТУРЫ
+                  </Typography>
+                </Link>
+
               </MenuItem>
-              <MenuItem
-                onClick={() => scrollToSection('highlights')}
-                sx={{ py: '6px', px: '12px' }}
-              >
-                <Typography sx={{ fontSize: '17px', color: 'black', }} variant="body2" color="text.primary">
-                  ТУРЫ ПО УЗБЕКИСТАНУ
-                </Typography>
-              </MenuItem>
+
             </Box>
             <Box sx={{ display: { sm: '', md: 'none' } }}>
               <Button
@@ -153,28 +163,50 @@ function AppAppBar({ mode, toggleColorMode }) {
                     flexGrow: 1,
                   }}
                 >
-                  <Box
-                    sx={{
-                      display: 'flex',
-                      flexDirection: 'column',
-                      alignItems: 'end',
-                      flexGrow: 1,
-                    }}
-                  >
-                    <ToggleColorMode mode={mode} toggleColorMode={toggleColorMode} />
-                  </Box>
-                  <MenuItem onClick={() => scrollToSection('features')}>
-                    Features
-                  </MenuItem>
-                  <MenuItem onClick={() => scrollToSection('testimonials')}>
-                    Testimonials
-                  </MenuItem>
-                  <MenuItem onClick={() => scrollToSection('highlights')}>
-                    Highlights
-                  </MenuItem>
+                  <Link to={'/'} >
+                    <MenuItem onClick={() => scrollToSection('features')}>
+                      Features
+                    </MenuItem>
+                  </Link>
+                  <Link to={'/about'} >
+                    <MenuItem onClick={() => scrollToSection('testimonials')}>
+                      Testimonials
+                    </MenuItem>
+                  </Link>
+                  <Link to={'/tour'} >
+                    <MenuItem onClick={() => scrollToSection('highlights')}>
+                      Highlights
+                    </MenuItem>
+                  </Link>
+
+
+
 
 
                   <Button variant="outlined" startIcon={<LocalPhoneIcon />}>+99890041 77 88 </Button>
+                  <ul className='flex gap-4 items-center'>
+                    <li>
+                      <a href="">
+                        <div className='p-2 rounded-full white border-[2px] cursor-pointer border-[#0E1A70] hover:bg-[#0E1A70] '>
+                          <TelegramIcon className='white' sx={{ color: '#0E1A70' }} />
+                        </div>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="">
+                        <div className='p-2 rounded-full white border-[2px] border-[#0E1A70] hover:bg-[#0E1A70] '>
+                          <InstagramIcon className='white' sx={{ color: '#0E1A70' }} />
+                        </div>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="">
+                        <div className='p-2 rounded-full white border-[2px] border-[#0E1A70] hover:bg-[#0E1A70] '>
+                          <YouTubeIcon className='white' sx={{ color: '#0E1A70' }} />
+                        </div>
+                      </a>
+                    </li>
+                  </ul>
                 </Box>
               </Drawer>
             </Box>

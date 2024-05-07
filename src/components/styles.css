@@ -87,4 +87,23 @@ body {
   
  
 
-  
+@media(max-width: 900px){
+    .dNone{
+        display: none;
+    }
+    .upTop{
+        transform: translateY(0);
+    }
+}
+@media(max-width: 1075px){
+    .colFlex{
+        flex-direction: column;
+    }
+    .w80{
+        width: 80%;
+    }
+    .mt5{
+        margin-top: 10px;
+    }
+     
+}
