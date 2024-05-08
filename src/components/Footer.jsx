@@ -21,7 +21,7 @@ const logoStyle = {
 export default function Footer() {
   return (
     <div className='bg-[#0E1A70] py-16'>
-      <div className='container mx-auto px-4 lg:px-10 flex flex-col lg:flex-row justify-between gap-8'>
+      <div className='  mx-auto px-4 lg:px-10 flex flex-col lg:flex-row justify-between gap-4'>
         {/* Logo and Contact Info Section */}
         <div className='lg:w-5/12 w-full'>
           <div className='flex flex-col lg:flex-row justify-start lg:justify-start gap-3 items-center mb-3'>
@@ -106,16 +106,16 @@ export default function Footer() {
         </div>
 
         {/* Google Maps Section */}
-        <div className='lg:w-4/12 w-full mt-8 lg:mt-0'>
-          <iframe
-            className='w-full h-52 lg:h-auto'
-            src='https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d17260.96671106854!2d67.8335716257686!3d40.112500455977305!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38b295d4b45f52e3%3A0x87011a97fa69f7f9!2sKing%20burger!5e0!3m2!1sru!2s!4v1714936376128!5m2!1sru!2s'
-            height='320'
-            allowFullScreen=''
-            loading='lazy'
-            referrerPolicy='no-referrer-when-downgrade'
-          ></iframe>
-        </div>
+         <div className='lg:w-4/12 w-full mt-8 lg:mt-0'>
+                    <iframe
+                        className='w-full h-52 lg:h-auto'
+                        src='https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d17260.96671106854!2d67.8335716257686!3d40.112500455977305!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38b295d4b45f52e3%3A0x87011a97fa69f7f9!2sKing%20burger!5e0!3m2!1sru!2s!4v1714936376128!5m2!1sru!2s'
+                        height='260'
+                        allowFullScreen=''
+                        loading='lazy'
+                        referrerPolicy='no-referrer-when-downgrade'
+                    ></iframe>
+                </div>
       </div>
 
       {/* Copyright Section */}
