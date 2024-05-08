@@ -151,7 +151,7 @@ function AppAppBar({ mode, toggleColorMode }) {
                 onClick={toggleDrawer(true)}
                 sx={{ minWidth: '30px', p: '4px' }}
               >
-                <MenuIcon  sx={{color: 'white'}} />
+                <MenuIcon sx={{ color: 'white' }} />
               </Button>
               <Drawer anchor="right" open={open} onClose={toggleDrawer(false)}>
                 <Box
@@ -160,52 +160,67 @@ function AppAppBar({ mode, toggleColorMode }) {
                     p: 2,
                     backgroundColor: 'background.paper',
                     flexGrow: 1,
+
                   }}
                 >
-                  <Link to={'/'} >
-                    <MenuItem onClick={() => scrollToSection('features')}>
-                      Features
-                    </MenuItem>
-                  </Link>
-                  <Link to={'/about'} >
-                    <MenuItem onClick={() => scrollToSection('testimonials')}>
-                      Testimonials
-                    </MenuItem>
-                  </Link>
-                  <Link to={'/tour'} >
-                    <MenuItem onClick={() => scrollToSection('highlights')}>
-                      Highlights
-                    </MenuItem>
-                  </Link>
+
+                  <div className='flex flex-col justify-between h-[100vh] items-center'>
+
+                    <div className='gap-6'>
+                      <Link to={'/'} >
+                        <p className='w-64 text-xl font-semibold hover:text-white hover:bg-[#0E1A70] hover:border-[#0E1A70] bg-[#fff] hover:border-[2px] text-[#0E1A70]  rounded-xl py-2 px-2'>
+                          ГЛАВНАЯ
+                        </p>
+
+                      </Link>
+                      <Link to={'/about'} >
+                        <p className='w-64 text-xl font-semibold hover:text-white hover:bg-[#0E1A70] hover:border-[#0E1A70] bg-[#fff] hover:border-[2px] text-[#0E1A70]  rounded-xl py-2 px-2'>
+                          О КОМПАНИИ
+                        </p>
+
+                      </Link>
+                      <Link to={'/tour'} >
+                        <p className='w-64 text-xl font-semibold hover:text-white hover:bg-[#0E1A70] hover:border-[#0E1A70] bg-[#fff] hover:border-[2px] text-[#0E1A70]  rounded-xl py-2 px-2'>
+                          ЗАРУБЕЖНЫЕ ТУРЫ
+                        </p>
+
+                      </Link>  
+                      <button className='w-64 text-xl font-semibold text-white bg-[#0E1A70] hover:border-[#0E1A70] hover:bg-[#fff] border-[2px] hover:text-[#0E1A70]  rounded-xl py-2 px-2'  ><LocalPhoneIcon /> +99890041 77 88 </button>
+                    </div>
+
+                  
+                    <ul className='flex gap-4 mt-4 items-center -translate-y-12'>
+
+                      <li>
+                        <a href="">
+                          <div className='p-2 rounded-full white border-[2px] cursor-pointer border-[#0E1A70] hover:bg-[#0E1A70] '>
+                            <TelegramIcon className='white' sx={{ color: '#0E1A70' }} />
+                          </div>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="">
+                          <div className='p-2 rounded-full white border-[2px] border-[#0E1A70] hover:bg-[#0E1A70] '>
+                            <InstagramIcon className='white' sx={{ color: '#0E1A70' }} />
+                          </div>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="">
+                          <div className='p-2 rounded-full white border-[2px] border-[#0E1A70] hover:bg-[#0E1A70] '>
+                            <YouTubeIcon className='white' sx={{ color: '#0E1A70' }} />
+                          </div>
+                        </a>
+                      </li>
+                    </ul>
+
+                  </div>
 
 
 
 
 
-                  <Button variant="outlined" startIcon={<LocalPhoneIcon />}>+99890041 77 88 </Button>
-                  <ul className='flex gap-4 items-center'>
-                    <li>
-                      <a href="">
-                        <div className='p-2 rounded-full white border-[2px] cursor-pointer border-[#0E1A70] hover:bg-[#0E1A70] '>
-                          <TelegramIcon className='white' sx={{ color: '#0E1A70' }} />
-                        </div>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="">
-                        <div className='p-2 rounded-full white border-[2px] border-[#0E1A70] hover:bg-[#0E1A70] '>
-                          <InstagramIcon className='white' sx={{ color: '#0E1A70' }} />
-                        </div>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="">
-                        <div className='p-2 rounded-full white border-[2px] border-[#0E1A70] hover:bg-[#0E1A70] '>
-                          <YouTubeIcon className='white' sx={{ color: '#0E1A70' }} />
-                        </div>
-                      </a>
-                    </li>
-                  </ul>
+
                 </Box>
               </Drawer>
             </Box>
