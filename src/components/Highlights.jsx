@@ -81,7 +81,7 @@ export default function Highlights() {
           </div>
           <div className="flex-[0.75] flex justify-center flex-col" style={{ opacity: '1', transform: 'none' }}>
 
-            <h2 className="mt-[8px] font-bold md:text-[34px] text-[40px] text-white undefined" style={{ opacity: '1', transform: 'none' }}>ЗАРУБЕЖНЫЕ ТУРЫ</h2>
+            <h2 className="mt-[8px] font-bold lg:text-[40px] md:text-[32px] text-[28px] text-white undefined" style={{ opacity: '1', transform: 'none' }}>ЗАРУБЕЖНЫЕ ТУРЫ</h2>
             <div className="mt-[31px] flex flex-col max-w-[370px] gap-[24px]">
               {items.map((item) => (
                 <div key={item.id} className="flex justify-center items-center flex-row">

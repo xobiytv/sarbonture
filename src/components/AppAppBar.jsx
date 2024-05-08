@@ -147,12 +147,11 @@ function AppAppBar({ mode, toggleColorMode }) {
             <Box sx={{ display: { sm: '', md: 'none' } }}>
               <Button
                 variant="text"
-                color="primary"
                 aria-label="menu"
                 onClick={toggleDrawer(true)}
                 sx={{ minWidth: '30px', p: '4px' }}
               >
-                <MenuIcon />
+                <MenuIcon  sx={{color: 'white'}} />
               </Button>
               <Drawer anchor="right" open={open} onClose={toggleDrawer(false)}>
                 <Box

@@ -40,44 +40,38 @@ export default function Ture() {
     };
 
     return (
-        <div className='h-[100vh] '>
+        <div className='lg:h-[100vh] md:h-[80vh] h-full '>
             <div className="text-center">
-                <h1 className="text-[45px] my-10 font-bold">ЗАРУБЕЖНЫЕ ТУРЫ</h1>
+                <h1 className="lg:text-[45px] md:text-[32px] text-[28px] my-10 font-bold">ЗАРУБЕЖНЫЕ ТУРЫ</h1>
             </div>
-            {/* <div className="flex flex-wrap justify-center gap-4 mb-10">
-                {ture.map((item) => (
-                    <div key={item.id} className="rounded w-1/2 md:w-1/3 lg:w-1/3 xl:w-1/4 overflow-hidden cursor-pointer" onClick={() => handleOpen(item)}>
-                        <img src={item.image} alt={item.name} className="w-full h-full object-cover" />
-                    </div>
-                ))}
-            </div> */}
+            <div className='lg:block md:block  hidden'>
+                <Container className="flex flex-wrap justify-center gap-4 m-10">
 
-            <Container className="flex flex-wrap justify-center gap-4 m-10">
-                <Swiper
-                    slidesPerView={3}
-                    spaceBetween={30}
-                    autoplay={{
-                        delay: 1500,
-                        disableOnInteraction: ture,
-                    }}
-                    freeMode={true}
-                    pagination={{
-                        clickable: false,
-                    }}
-                    modules={[FreeMode, Pagination]}
-                    className="mySwiper bg-none"
-                >
+                    <Swiper
+                        slidesPerView={3}
+                        spaceBetween={30}
+                        autoplay={{
+                            delay: 1500,
+                            disableOnInteraction: ture,
+                        }}
+                        freeMode={true}
+                        pagination={{
+                            clickable: false,
+                        }}
+                        modules={[FreeMode, Pagination]}
+                        className="mySwiper bg-none"
+                    >
 
 
-                    {ture.map((item) => (
-                        <SwiperSlide key='index' className=''>
+                        {ture.map((item) => (
+                            <SwiperSlide key='index' className=''>
 
-                            <div key={item.id} className="rounded w-full overflow-hidden cursor-pointer" onClick={() => handleOpen(item)}>
-                                <img src={item.image} alt={item.name} className="w-full hover:w-[105%] h-full object-cover" />
-                            </div>
+                                <div key={item.id} className="rounded w-full overflow-hidden cursor-pointer" onClick={() => handleOpen(item)}>
+                                    <img src={item.image} alt={item.name} className="w-full hover:w-[105%] h-full object-cover" />
+                                </div>
 
-                        </SwiperSlide>
-                    ))}
+                            </SwiperSlide>
+                        ))}
 
 
 
@@ -85,9 +79,51 @@ export default function Ture() {
 
 
 
-                </Swiper>
-            </Container>
+                    </Swiper>
 
+
+                </Container>
+            </div>
+            <div className='lg:hidden md:hidden block'>
+                <Container className="flex flex-wrap justify-center gap-4 m-10">
+
+                    <Swiper
+                        slidesPerView={2}
+                        spaceBetween={30}
+                        autoplay={{
+                            delay: 1500,
+                            disableOnInteraction: ture,
+                        }}
+                        freeMode={true}
+                        pagination={{
+                            clickable: false,
+                        }}
+                        modules={[FreeMode, Pagination]}
+                        className="mySwiper bg-none"
+                    >
+
+
+                        {ture.map((item) => (
+                            <SwiperSlide key='index' className=''>
+
+                                <div key={item.id} className="rounded w-full overflow-hidden cursor-pointer" onClick={() => handleOpen(item)}>
+                                    <img src={item.image} alt={item.name} className="w-full hover:w-[105%] h-full object-cover" />
+                                </div>
+
+                            </SwiperSlide>
+                        ))}
+
+
+
+
+
+
+
+                    </Swiper>
+
+
+                </Container>
+            </div>
 
             <Modal
                 open={open}
@@ -100,7 +136,7 @@ export default function Ture() {
                         <div className='lg:flex md:flex gap-4'>
                             <img src={selectedItem.image} alt={selectedItem.name} className="w-1/2 h-full object-contain rounded" />
 
-                            <div className='flex justify-between items-start flex-col'>
+                            <div className='flex justify-between lg:items-start md:items-start   items-center flex-col'>
                                 <div>
                                     <b className='text-xl'>{selectedItem.name}</b>
                                     <p className='text-lg'>{selectedItem.discration} </p>

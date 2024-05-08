@@ -6,7 +6,7 @@ export default function App({label}) {
 
         <div className='  h-auto bgAbout   '>
             
-            <div className='flex h-[33vh] pt-16 lg:items-end items-start px-9 '>
+            <div className='flex h-[33vh] pt-16 lg:items-end items-start px-5 '>
                 <div className='flex justify-between items-center w-full'>
                     <p className="px-3 py-2 text-blue-700 font-medium text-xl rounded">-About Us</p>
                     <Chips label={'About Us'} />

@@ -73,7 +73,7 @@ export default function HeadTure({ label }) {
         top: '50%',
         left: '50%',
         transform: 'translate(-50%, -50%)',
-        width: '80%', // Modal genişliği
+        width: '90%', // Modal genişliği
         maxWidth: 600, // Maksimum genişlik
         bgcolor: 'background.paper',
         boxShadow: 24,
@@ -98,7 +98,7 @@ export default function HeadTure({ label }) {
 
 
                 <div className='px-3 lg:px-0'>
-                    <Search style={{background: 'white'}}>
+                    <Search style={{ background: 'white' }}>
                         <SearchIconWrapper>
                             <SearchIcon />
                         </SearchIconWrapper>
@@ -141,19 +141,23 @@ export default function HeadTure({ label }) {
             >
                 <Box sx={modalStyle}>
                     {selectedItem && (
-                        <div className="flex gap-4">
-                            <img src={selectedItem.image} alt={selectedItem.name} className="w-1/2 h-full object-contain" />
+                        <div className='lg:flex md:flex gap-4'>
+                            <img src={selectedItem.image} alt={selectedItem.name} className="w-1/2 h-full object-contain rounded" />
 
-                            <div>
-                                <b>{selectedItem.name}</b>
-                                <p>{selectedItem.description}</p>
-                                <Button variant="contained" endIcon={<AddShoppingCartIcon />}>
+                            <div className='flex justify-between lg:items-start md:items-start   items-center flex-col'>
+                                <div>
+                                    <b className='text-xl'>{selectedItem.name}</b>
+                                    <p className='text-lg'>{selectedItem.description} </p>
+                                </div>
+
+                                <button className='rounded px-3 py-2 bg-[#0E1A70] text-white active:bg-[#939ef3c2]' variant="contained"  >
                                     Bron qilish
-                                </Button>
+                                </button>
                             </div>
                         </div>
                     )}
                 </Box>
+                 
             </Modal>
         </div>
     );
