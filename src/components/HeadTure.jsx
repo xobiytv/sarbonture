@@ -86,19 +86,19 @@ export default function HeadTure({ label }) {
     );
 
     return (
-        <div className=" bg-slate-100 h-auto">
-            <div className='flex lg:h-[35vh] h-[15vh] pt-16 lg:items-end items-start px-5 '>
+        <div className=" bgAbout h-auto">
+            <div className='flex  lg:h-[33vh] h-[15vh] pt-16 lg:items-end items-start px-9 '>
                 <div className='flex justify-between items-center w-full'>
                     <p className="px-3 py-2 text-blue-700 font-medium text-xl rounded">-Tour</p>
                     <Chips label={'Tour'} />
                 </div>
 
             </div>
-            <div className="flex  translate-y-11 justify-end gap-3 items-center text-center w-full flex-col text-black">
+            <div className="flex   translate-y-11 justify-end gap-3 items-center text-center w-full flex-col text-black">
 
 
                 <div className='px-3 lg:px-0'>
-                    <Search>
+                    <Search style={{background: 'white'}}>
                         <SearchIconWrapper>
                             <SearchIcon />
                         </SearchIconWrapper>
@@ -112,7 +112,7 @@ export default function HeadTure({ label }) {
                 </div>
 
 
-                <p>Lorem ipsum dolor sit amet consectetur.</p>
+                <p className='text-white text-2xl font-semibold'>Lorem ipsum dolor sit amet consectetur.</p>
             </div>
 
             {filteredTureData.length === 0 && (
@@ -121,7 +121,7 @@ export default function HeadTure({ label }) {
                 </div>
             )}
 
-            <div className="flex flex-wrap justify-center gap-4 mt-16 pb-10 mb-5">
+            <div className="flex flex-wrap justify-center gap-4 mt-16 pb-10 pb-5">
                 {filteredTureData.map((item) => (
                     <div
                         key={item.id}

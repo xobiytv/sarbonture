@@ -50,7 +50,7 @@ body {
     background-size: 100%;
 }
 
- 
+
 
 .bgTurkiya {
     background: url('https://triptour.uz/wp-content/uploads/2023/11/cami-cuma.jpg') no-repeat center center;
@@ -62,7 +62,13 @@ body {
     background-size: 100%;
 }
 
-.white:hover{
+.bgAbout {
+    background: linear-gradient(
+            #fff 0%,
+            #0E1A70 100%);
+}
+
+.white:hover {
     color: #fff;
 }
 
@@ -70,40 +76,45 @@ body {
 
 #app {
     height: 100%;
-  }
-  html,
-  body {
+}
+
+html,
+body {
     position: relative;
     height: 100%;
-  }
-  
+}
 
-  .swiper {
+
+.swiper {
     width: 100%;
     height: 100%;
-  }
-  
+}
 
-  
- 
 
-@media(max-width: 900px){
-    .dNone{
+
+
+
+@media(max-width: 900px) {
+    .dNone {
         display: none;
     }
-    .upTop{
+
+    .upTop {
         transform: translateY(0);
     }
 }
-@media(max-width: 1075px){
-    .colFlex{
+
+@media(max-width: 1075px) {
+    .colFlex {
         flex-direction: column;
     }
-    .w80{
+
+    .w80 {
         width: 80%;
     }
-    .mt5{
+
+    .mt5 {
         margin-top: 10px;
     }
-     
+
 }

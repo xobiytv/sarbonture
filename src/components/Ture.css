@@ -1,0 +1,13 @@
+/* Ture.css */
+.custom-modal {
+    transition: opacity 0.3s ease;
+    opacity: 1;
+}
+
+.custom-modal[aria-hidden='true'] {
+    opacity: 0;
+}
+
+.custom-button {
+    margin-top: 16px;
+}
